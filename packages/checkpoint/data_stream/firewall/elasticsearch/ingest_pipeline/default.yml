@@ -1091,9 +1091,10 @@ processors:
       target_field: event.duration
       ignore_missing: true
   - convert:
+      tag: convert_event_duration_to_integer
       field: event.duration
       type: integer
-      ignore_missing: trur
+      ignore_missing: true
   - script:
       tag: event_duration_conversion_to_long
       lang: painless
